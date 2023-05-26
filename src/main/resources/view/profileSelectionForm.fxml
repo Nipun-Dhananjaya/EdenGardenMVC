@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="510.0" prefWidth="776.0" stylesheets="@../style/clc-customizer-previewer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.ProfileSelectionFormController">
+   <children>
+      <Label layoutX="237.0" layoutY="14.0" text="Select Profile" textFill="#eb0505c9">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="43.0" />
+         </font>
+      </Label>
+      <Separator layoutX="23.0" layoutY="50.0" prefHeight="24.0" prefWidth="730.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Separator>
+      <JFXButton fx:id="mngrBtn" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="12.0" layoutX="448.0" layoutY="199.0" onAction="#showmngrLoginFormOnAction" prefHeight="198.0" prefWidth="171.0" ripplerFill="#ffffff00" style="-fx-background-color: skyblue; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: brown;" text="Manager" textAlignment="CENTER" textFill="#b91d1d">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/4206265.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <Shadow />
+         </effect>
+      </JFXButton>
+      <Hyperlink fx:id="wbLnk" layoutX="287.0" layoutY="472.0" onAction="#loadBrowserOnAction" text="https://www.edengardensigiriya.com" />
+      <JFXButton fx:id="rcptnBtn" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="12.0" layoutX="151.0" layoutY="199.0" onAction="#showrcptnLoginFormOnAction" prefHeight="198.0" prefWidth="171.0" ripplerFill="#ffffff00" style="-fx-background-color: skyblue; -fx-border-color: brown; -fx-background-radius: 50; -fx-border-radius: 50;" text="Receiptionist" textAlignment="CENTER" textFill="#b91d1d">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/4635296.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <Shadow />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>

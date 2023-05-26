@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="roomsRoot" prefHeight="722.0" prefWidth="1318.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: brown;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.RoomManageFormController">
+    <children>
+        <Label layoutX="568.0" layoutY="14.0" text="Room Manage" textFill="#1410e0">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+            </font>
+        </Label>
+        <Separator layoutX="37.0" layoutY="45.0" prefHeight="2.0" prefWidth="1242.0" />
+        <TextField fx:id="roomNoTxt" layoutX="240.0" layoutY="75.0" onAction="#roomNoSearchOnAction" prefHeight="27.0" prefWidth="327.0" promptText="Room No" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="240.0" layoutY="57.0" text="Room No            :" />
+        <Label layoutX="440.0" layoutY="121.0" text="Beds                    :" />
+        <TextField fx:id="costTxt" layoutX="749.0" layoutY="75.0" prefHeight="27.0" prefWidth="327.0" promptText="Cost Per Day" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="749.0" layoutY="57.0" text="Cost Per Day       :" />
+        <TableView fx:id="roomTbl" layoutX="39.0" layoutY="182.0" prefHeight="534.0" prefWidth="1242.0" style="-fx-border-color: brown;" styleClass="column-header-background">
+            <columns>
+                <TableColumn fx:id="columnRoomNo" prefWidth="148.79999542236328" text="Room No" />
+                <TableColumn fx:id="columnRoomType" prefWidth="317.5999755859375" text="Room Type" />
+                <TableColumn fx:id="columnBedCount" prefWidth="291.1999816894531" text="Bed Count" />
+                <TableColumn fx:id="columnCostPerDay" prefWidth="283.2000732421875" text="Cost Per Day" />
+            <TableColumn fx:id="columnRoomState" prefWidth="202.400146484375" text="Room State" />
+            </columns>
+        </TableView>
+        <Button fx:id="addBtn" layoutX="749.0" layoutY="139.0" mnemonicParsing="false" onAction="#addRoomOnAction" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: #4CAF50; -fx-border-color: brown;" text="Add" textFill="#fcfafa">
+            <font>
+                <Font name="Arial Narrow" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="updateBtn" layoutX="864.0" layoutY="139.0" mnemonicParsing="false" onAction="#updateDetailsOnAction" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: blue; -fx-border-color: brown;" text="Update" textFill="#fcfafa">
+            <font>
+                <Font name="Arial Narrow" size="14.0" />
+            </font>
+        </Button>
+      <ComboBox fx:id="roomTypeCmbBx" layoutX="239.0" layoutY="139.0" prefHeight="27.0" prefWidth="193.0" promptText="Room Type" style="-fx-background-color: white; -fx-border-color: brown;" />
+      <ComboBox fx:id="sleepsCountCmbBx" layoutX="439.0" layoutY="139.0" prefHeight="27.0" prefWidth="125.0" promptText="Sleeps" style="-fx-background-color: white; -fx-border-color: brown;" />
+      <Button fx:id="removeBtn" layoutX="981.0" layoutY="139.0" mnemonicParsing="false" onAction="#removeRoomOnAction" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: Red; -fx-border-color: brown;" text="Remove" textFill="#fcfafa">
+         <font>
+            <Font name="Arial Narrow" size="14.0" />
+         </font>
+      </Button>
+    </children>
+    <stylesheets>
+        <URL value="@../style/clc-customizer-previewer.css" />
+    </stylesheets>
+</AnchorPane>

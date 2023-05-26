@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="filterRoot" prefHeight="630.0" prefWidth="798.0" style="-fx-border-color: brown; -fx-background-radius: 50; -fx-border-radius: 50;" stylesheets="@../style/clc-customizer-previewer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.FilterFormController">
+    <children>
+        <BarChart layoutX="14.0" layoutY="14.0" prefHeight="376.0" prefWidth="440.0">
+            <xAxis>
+                <CategoryAxis side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" />
+            </yAxis>
+        </BarChart>
+    </children>
+</AnchorPane>

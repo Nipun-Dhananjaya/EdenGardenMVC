@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="filterRoot" prefHeight="722.0" prefWidth="1318.0" style="-fx-border-color: brown; -fx-background-radius: 50; -fx-border-radius: 50;" stylesheets="@../style/clc-customizer-previewer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.FilterCustomerFormController">
+   <children>
+      <Label layoutX="614.0" layoutY="14.0" text="Reports" textFill="#1410e0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="55.0" layoutY="45.0" prefHeight="0.0" prefWidth="1213.0" />
+      <JFXButton fx:id="custReportBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="211.0" layoutY="123.0" onAction="#showCustReportOnAction" prefHeight="150.0" prefWidth="342.0" ripplerFill="#ffffff00" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-width: 2; -fx-background-position: white; -fx-border-color: blue;" text="Customer Reports" textFill="#0d15d9">
+         <graphic>
+            <ImageView fitHeight="97.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Customer-Transparent-PNG.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <Shadow />
+         </effect>
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="bookingReportBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="763.0" layoutY="122.0" onAction="#showBookingReportOnAction" prefHeight="150.0" prefWidth="342.0" ripplerFill="#ffffff00" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-width: 2; -fx-background-position: white; -fx-border-color: blue;" text="Booking Reports" textFill="#0d15d9">
+         <graphic>
+            <ImageView fitHeight="97.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/195-1957241_edit-check-sheet-check-sheet-icon-hd-png-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <Shadow />
+         </effect>
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="carRentalReportBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="211.0" layoutY="326.0" onAction="#showcarRentalReportOnAction" prefHeight="150.0" prefWidth="342.0" ripplerFill="#ffffff00" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-width: 2; -fx-background-position: white; -fx-border-color: blue;" text="Car Rental Reports" textFill="#0d15d9">
+         <graphic>
+            <ImageView fitHeight="97.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/images__2_-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <Shadow />
+         </effect>
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="paymentReportBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="490.0" layoutY="525.0" onAction="#showPaymentReportOnAction" prefHeight="150.0" prefWidth="342.0" ripplerFill="#ffffff00" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-width: 2; -fx-background-position: white; -fx-border-color: blue;" text="Payment Reports" textFill="#0d15d9">
+         <graphic>
+            <ImageView fitHeight="97.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/images11-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <Shadow />
+         </effect>
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="bicycleRentalReportBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="763.0" layoutY="326.0" onAction="#showbicycleRentalReportOnAction" prefHeight="150.0" prefWidth="342.0" ripplerFill="#ffffff00" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-width: 2; -fx-background-position: white; -fx-border-color: blue;" text="Bicycle Rental Reports" textFill="#0d15d9">
+         <graphic>
+            <ImageView fitHeight="97.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/png-transparent-the-bike-shack-sport-cycling-computer-icons-bicycle-cycling-blue-sport-logo-thumbnail-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <Shadow />
+         </effect>
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

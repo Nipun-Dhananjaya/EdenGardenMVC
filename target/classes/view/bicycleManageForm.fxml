@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bicycleRoot" prefHeight="722.0" prefWidth="1318.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: brown;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.BicycleManageFormController">
+    <children>
+        <Label layoutX="562.0" layoutY="14.0" text="Bicycle Manage" textFill="#1410e0">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+            </font>
+        </Label>
+        <Separator layoutX="50.0" layoutY="45.0" prefHeight="0.0" prefWidth="1226.0" />
+        <TextField fx:id="bicycleNoTxt" layoutX="149.0" layoutY="70.0" onAction="#bicycleNoSearchOnAction" prefHeight="27.0" prefWidth="327.0" promptText="Bicycle No" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="149.0" layoutY="52.0" text="Bicycle No            :" />
+        <Label layoutX="149.0" layoutY="120.0" text="Bicycle Type         :" />
+        <TextField fx:id="brandTxt" layoutX="853.0" layoutY="70.0" prefHeight="27.0" prefWidth="327.0" promptText="Brand" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="853.0" layoutY="52.0" text="Brand       :" />
+        <TableView fx:id="bicycleTbl" layoutX="20.0" layoutY="182.0" prefHeight="522.0" prefWidth="1279.0" style="-fx-border-color: brown;" styleClass="column-header-background">
+            <columns>
+                <TableColumn fx:id="columnBicycleNo" prefWidth="196.0" text="Bicycle No" />
+                <TableColumn fx:id="columnBrand" prefWidth="388.8000030517578" text="Brand" />
+                <TableColumn fx:id="columnType" prefWidth="316.79998779296875" text="Bicycle Type" />
+                <TableColumn fx:id="columnColor" prefWidth="196.79998779296875" text="Colour" />
+            <TableColumn fx:id="columnStatus" prefWidth="176.800048828125" text="Status" />
+            </columns>
+        </TableView>
+        <Button fx:id="addBtn" layoutX="853.0" layoutY="138.0" mnemonicParsing="false" onAction="#addBicycleOnAction" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: #4CAF50; -fx-border-color: brown;" text="Add" textFill="#fcfafa">
+            <font>
+                <Font name="Arial Narrow" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="updateBtn" layoutX="968.0" layoutY="138.0" mnemonicParsing="false" onAction="#updateDetailsOnAction" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: blue; -fx-border-color: brown;" text="Update" textFill="#fcfafa">
+            <font>
+                <Font name="Arial Narrow" size="14.0" />
+            </font>
+        </Button>
+        <ComboBox fx:id="bicycleTypeCmbBx" layoutX="149.0" layoutY="138.0" prefHeight="27.0" prefWidth="154.0" promptText="Bicycle Type" style="-fx-background-color: white; -fx-border-color: brown;" />
+        <Button fx:id="removeBtn" layoutX="1085.0" layoutY="138.0" mnemonicParsing="false" onAction="#removeBicycleOnAction" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: Red; -fx-border-color: brown;" text="Remove" textFill="#fcfafa">
+            <font>
+                <Font name="Arial Narrow" size="14.0" />
+            </font>
+        </Button>
+        <TextField fx:id="colourTxt" layoutX="322.0" layoutY="138.0" prefHeight="27.0" prefWidth="154.0" promptText="Colour" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="322.0" layoutY="120.0" text="Colour            :" />
+    </children>
+    <stylesheets>
+        <URL value="@../style/clc-customizer-previewer.css" />
+    </stylesheets>
+</AnchorPane>

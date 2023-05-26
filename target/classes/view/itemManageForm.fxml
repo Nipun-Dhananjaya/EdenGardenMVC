@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="itemRoot" prefHeight="722.0" prefWidth="1318.0" style="-fx-border-color: brown; -fx-border-radius: 50;" stylesheets="@../style/clc-customizer-previewer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.ItemManageFormController">
+   <children>
+      <Label layoutX="576.0" layoutY="24.0" text="Item Manage" textFill="#1410e0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="45.0" layoutY="55.0" prefHeight="2.0" prefWidth="1246.0" />
+      <TextField fx:id="idTxt" layoutX="239.0" layoutY="84.0" onAction="#idSearchOnAction" prefHeight="27.0" prefWidth="327.0" promptText="Item Code" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+      <Label layoutX="239.0" layoutY="66.0" text="Item Code              :" />
+      <TextField fx:id="nameTxt" layoutX="778.0" layoutY="79.0" prefHeight="27.0" prefWidth="327.0" promptText="Item Name" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+      <Label layoutX="778.0" layoutY="61.0" text="Item Name        :" />
+      <TableView fx:id="itmTbl" layoutX="38.0" layoutY="182.0" prefHeight="534.0" prefWidth="1246.0" style="-fx-border-color: brown;" styleClass="column-header-background">
+         <columns>
+            <TableColumn fx:id="columnId" prefWidth="223.1999626159668" text="Item Code" />
+            <TableColumn fx:id="columnName" prefWidth="1019.1999816894531" text="Item Name" />
+         </columns>
+      </TableView>
+      <Button fx:id="addBtn" layoutX="777.0" layoutY="131.0" mnemonicParsing="false" onAction="#addItemOnAction" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: #4CAF50; -fx-border-color: brown;" text="Add" textFill="#fcfafa">
+         <font>
+            <Font name="Arial Narrow" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateBtn" layoutX="892.0" layoutY="131.0" mnemonicParsing="false" onAction="#updateItemOnAction" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: blue; -fx-border-color: brown;" text="Update" textFill="#fcfafa">
+         <font>
+            <Font name="Arial Narrow" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="removeBtn" layoutX="1006.0" layoutY="131.0" mnemonicParsing="false" onAction="#removeItemOnAction" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: Red; -fx-border-color: brown;" text="Remove" textFill="#fcfafa">
+         <font>
+            <Font name="Arial Narrow" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

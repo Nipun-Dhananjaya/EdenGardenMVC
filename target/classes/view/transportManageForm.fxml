@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="transportRoot" prefHeight="722.0" prefWidth="1318.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: brown;" stylesheets="@../style/clc-customizer-previewer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.TransportManageFormController">
+    <children>
+        <Label layoutX="546.0" layoutY="14.0" text="Transport Manage" textFill="#1410e0">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+            </font>
+        </Label>
+        <Separator layoutX="37.0" layoutY="46.0" prefHeight="2.0" prefWidth="1247.0" />
+        <TextField fx:id="transportIdTxt" layoutX="214.0" layoutY="69.0" onAction="#idSearchOnAction" prefHeight="27.0" prefWidth="329.0" promptText="Transport ID" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="214.0" layoutY="51.0" text="Transport ID                :" />
+        <TextField fx:id="custIdTxt" layoutX="214.0" layoutY="137.0" onAction="#searchCustomerOnAction" prefHeight="27.0" prefWidth="330.0" promptText="Customer ID" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="214.0" layoutY="119.0" text="Customer ID                :" />
+        <TextField fx:id="nameTxt" layoutX="215.0" layoutY="206.0" prefHeight="27.0" prefWidth="330.0" promptText="Customer Name" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="215.0" layoutY="188.0" text="Customer Name          :" />
+        <TextField fx:id="startTimeTxt" layoutX="976.0" layoutY="75.0" prefHeight="27.0" prefWidth="130.0" promptText="Time" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="777.0" layoutY="57.0" text="Date &amp; Time        :" />
+        <TableView fx:id="transportTbl" layoutX="36.0" layoutY="326.0" prefHeight="390.0" prefWidth="1247.0" style="-fx-border-color: brown;">
+            <columns>
+                <TableColumn fx:id="columnTransportId" prefWidth="112.8000259399414" text="Transport ID" />
+                <TableColumn fx:id="columnCustId" prefWidth="118.39999389648438" text="Customer ID" />
+                <TableColumn fx:id="columnCustName" prefWidth="283.20001220703125" text="Name" />
+                <TableColumn fx:id="columnStartDateTime" prefWidth="292.79998779296875" text="Date &amp; Time" />
+                <TableColumn fx:id="columnDestination" prefWidth="205.60003662109375" text="Destination" />
+                <TableColumn fx:id="columnCost" prefWidth="137.5999755859375" text="Cost" />
+            <TableColumn fx:id="columnStatus" prefWidth="92.0" text="Status" />
+            </columns>
+        </TableView>
+        <Button fx:id="bookBtn" layoutX="776.0" layoutY="276.0" mnemonicParsing="false" onAction="#bookTransportOnAction" prefHeight="27.0" prefWidth="102.0" style="-fx-background-color: #4CAF50; -fx-border-color: brown;" text="Book Now" textFill="#fcfafa">
+            <font>
+                <Font name="Arial Narrow" size="14.0" />
+            </font>
+        </Button>
+        <DatePicker fx:id="DateTimeDtPckr" layoutX="777.0" layoutY="75.0" prefHeight="27.0" prefWidth="196.0" promptText="Date" style="-fx-border-color: brown;" />
+        <TextField fx:id="destinationTxt" layoutX="778.0" layoutY="143.0" prefHeight="27.0" prefWidth="330.0" promptText="Destination" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="777.0" layoutY="125.0" text="Destination          :" />
+        <TextField fx:id="costTxt" layoutX="776.0" layoutY="212.0" prefHeight="27.0" prefWidth="330.0" promptText="Cost" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="777.0" layoutY="194.0" text="Cost         :" />
+        <Button fx:id="cancelTransportBtn" layoutX="1005.0" layoutY="276.0" mnemonicParsing="false" onAction="#cancelTransportOnAction" prefHeight="27.0" prefWidth="102.0" style="-fx-background-color: red; -fx-border-color: brown;" text="Cancel Booking" textFill="#fcfafa">
+            <font>
+                <Font name="Arial Narrow" size="14.0" />
+            </font>
+        </Button>
+      <Button fx:id="updateBtn" layoutX="890.0" layoutY="276.0" mnemonicParsing="false" onAction="#updateDetailsOnAction" prefHeight="27.0" prefWidth="102.0" style="-fx-background-color: blue; -fx-border-color: brown;" text="Update" textFill="#fcfafa">
+         <font>
+            <Font name="Arial Narrow" size="14.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

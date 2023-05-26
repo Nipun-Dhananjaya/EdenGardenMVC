@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="custRoot" prefHeight="722.0" prefWidth="1318.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: brown;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.CustomerManageFormController">
+   <children>
+      <Label layoutX="542.0" layoutY="14.0" text="Customer Manage" textFill="#1410e0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="36.0" layoutY="45.0" prefHeight="5.0" prefWidth="1239.0" />
+      <TextField fx:id="idTxt" layoutX="220.0" layoutY="69.0" onAction="#idSearchOnAction" prefHeight="27.0" prefWidth="327.0" promptText="Enter Customer ID to Search" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+      <Label layoutX="220.0" layoutY="51.0" text="Customer ID              :" />
+      <TextField fx:id="nameTxt" layoutX="220.0" layoutY="135.0" prefHeight="27.0" prefWidth="327.0" promptText="Customer Name" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+      <Label layoutX="220.0" layoutY="117.0" text="Customer Name        :" />
+      <TextField fx:id="nicTxt" layoutX="220.0" layoutY="195.0" prefHeight="27.0" prefWidth="327.0" promptText="Customer NIC" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+      <Label layoutX="220.0" layoutY="177.0" text="Customer NIC            :" />
+      <TextField fx:id="emailTxt" layoutX="220.0" layoutY="253.0" prefHeight="27.0" prefWidth="327.0" promptText="Customer Email" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+      <Label layoutX="220.0" layoutY="235.0" text="Customer Email         :" />
+      <TextField fx:id="addressTxt" layoutX="769.0" layoutY="69.0" prefHeight="27.0" prefWidth="327.0" promptText="Customer Address" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+      <Label layoutX="769.0" layoutY="51.0" text="Customer Address      :" />
+      <TextField fx:id="contactTxt" layoutX="769.0" layoutY="135.0" prefHeight="27.0" prefWidth="118.0" promptText="Contact Number" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+      <Label layoutX="770.0" layoutY="117.0" text="Customer Contact      :" />
+      <Button fx:id="addContactBtn" layoutX="893.0" layoutY="135.0" mnemonicParsing="false" onAction="#addContactOnAction" prefHeight="26.0" prefWidth="29.0" style="-fx-background-color: white; -fx-border-color: brown;" text="+" />
+      <Label layoutX="770.0" layoutY="177.0" text="Gender                       :" />
+      <RadioButton fx:id="maleRdBtn" layoutX="770.0" layoutY="200.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="femaleRdBtn" layoutX="921.0" layoutY="200.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+      <TableView fx:id="custTbl" editable="true" fixedCellSize="25.0" layoutX="39.0" layoutY="308.0" prefHeight="410.0" prefWidth="1239.0" style="-fx-border-color: brown;" styleClass="column-header-background">
+        <columns>
+          <TableColumn fx:id="columnCustId" prefWidth="68.800048828125" text="ID" />
+          <TableColumn fx:id="columnCustName" prefWidth="242.39997100830078" text="Name" />
+            <TableColumn fx:id="columnCustNic" prefWidth="131.20001220703125" text="NIC" />
+            <TableColumn fx:id="columnCustEmail" prefWidth="274.39996337890625" text="Email" />
+            <TableColumn fx:id="columnCustAddress" prefWidth="227.20001220703125" text="Address" />
+            <TableColumn fx:id="columnCustContact" prefWidth="235.20001220703125" text="Contact" />
+            <TableColumn fx:id="columnCustGender" prefWidth="55.199951171875" text="Gender" />
+        </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <Button fx:id="addBtn" layoutX="769.0" layoutY="253.0" mnemonicParsing="false" onAction="#addCustomerOnAction" prefHeight="27.0" prefWidth="154.0" style="-fx-background-color: #4CAF50; -fx-border-color: brown;" text="Add" textFill="#fcfafa">
+         <font>
+            <Font name="Arial Narrow" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateBtn" layoutX="941.0" layoutY="253.0" mnemonicParsing="false" onAction="#updateDetailsOnAction" prefHeight="27.0" prefWidth="154.0" style="-fx-background-color: blue; -fx-border-color: brown;" text="Update" textFill="#fcfafa">
+         <font>
+            <Font name="Arial Narrow" size="14.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="contactCmbBx" layoutX="943.0" layoutY="135.0" onAction="#setTxtBxValueOnAction" prefHeight="27.0" prefWidth="154.0" promptText="Contact List" style="-fx-background-color: white; -fx-border-color: brown;" />
+   </children>
+   <stylesheets>
+      <URL value="@../style/clc-customizer-previewer.css" />
+   </stylesheets>
+</AnchorPane>

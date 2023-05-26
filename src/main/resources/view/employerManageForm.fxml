@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="employerRoot" prefHeight="722.0" prefWidth="1318.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: brown;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.EmployerManageFormController">
+    <children>
+        <Label layoutX="543.0" layoutY="14.0" text="Employer Manage" textFill="#1410e0">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+            </font>
+        </Label>
+        <Separator layoutX="41.0" layoutY="44.0" prefHeight="3.0" prefWidth="1243.0" />
+        <TextField fx:id="idTxt" layoutX="215.0" layoutY="74.0" onAction="#idSearchOnAction" prefHeight="27.0" prefWidth="327.0" promptText="Employer ID" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="215.0" layoutY="56.0" text="Employer ID              :" />
+        <TextField fx:id="nameTxt" layoutX="215.0" layoutY="123.0" prefHeight="27.0" prefWidth="327.0" promptText="Employer Name" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="215.0" layoutY="105.0" text="Employer Name        :" />
+        <TextField fx:id="nicTxt" layoutX="215.0" layoutY="170.0" prefHeight="27.0" prefWidth="327.0" promptText="Employer NIC" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="215.0" layoutY="152.0" text="Employer NIC            :" />
+        <TextField fx:id="emailTxt" layoutX="215.0" layoutY="216.0" prefHeight="27.0" prefWidth="327.0" promptText="Employer Email" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="215.0" layoutY="198.0" text="Employer Email         :" />
+        <TextField fx:id="addressTxt" layoutX="215.0" layoutY="264.0" prefHeight="27.0" prefWidth="327.0" promptText="Employer Address" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="215.0" layoutY="246.0" text="Employer Address     :" />
+        <Label layoutX="216.0" layoutY="294.0" text="Employer Contact      :" />
+        <Label layoutX="771.0" layoutY="248.0" text="Gender                       :" />
+        <RadioButton fx:id="maleRdBtn" layoutX="771.0" layoutY="271.0" mnemonicParsing="false" text="Male">
+            <toggleGroup>
+                <ToggleGroup fx:id="gender" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="femaleRdBtn" layoutX="922.0" layoutY="271.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+        <TableView fx:id="empTbl" layoutX="39.0" layoutY="366.0" prefHeight="350.0" prefWidth="1243.0" style="-fx-border-color: brown;" styleClass="column-header-background">
+            <columns>
+                <TableColumn fx:id="columnId" prefWidth="62.39999008178711" text="ID" />
+                <TableColumn fx:id="columnName" prefWidth="145.60000610351562" text="Name" />
+                <TableColumn fx:id="columnNic" prefWidth="108.80000305175781" text="NIC" />
+                <TableColumn fx:id="columnAddress" prefWidth="143.20001220703125" text="Address" />
+                <TableColumn fx:id="columnEmail" prefWidth="170.40008544921875" text="Email" />
+                <TableColumn fx:id="columnContact" prefWidth="146.39996337890625" text="Contact" />
+                <TableColumn fx:id="columnDob" prefWidth="83.20001220703125" text="DOB" />
+            <TableColumn fx:id="columnGender" prefWidth="48.79998779296875" text="Gender" />
+            <TableColumn fx:id="columnJobrole" prefWidth="83.20001220703125" text="Job Role" />
+            <TableColumn fx:id="columnSalary" prefWidth="72.8001708984375" text="Salary" />
+            <TableColumn fx:id="columnStartDate" prefWidth="79.199951171875" text="Start Date" />
+            <TableColumn fx:id="columnResignedDate" prefWidth="87.199951171875" text="Resigned Date" />
+            </columns>
+        </TableView>
+        <Button fx:id="addBtn" layoutX="771.0" layoutY="312.0" mnemonicParsing="false" onAction="#addEmployerOnAction" prefHeight="27.0" prefWidth="163.0" style="-fx-background-color: #4CAF50; -fx-border-color: brown;" text="Add" textFill="#fcfafa">
+            <font>
+                <Font name="Arial Narrow" size="14.0" />
+            </font>
+        </Button>
+      <TextField fx:id="jobRolTxt" layoutX="771.0" layoutY="74.0" prefHeight="27.0" prefWidth="327.0" promptText="Job Role" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+      <Label layoutX="773.0" layoutY="56.0" text="Job Role                  :" />
+      <Label layoutX="771.0" layoutY="152.0" text="Start Date                 :" />
+      <Label layoutX="943.0" layoutY="152.0" text="End Date                  :" />
+      <DatePicker fx:id="strtDtDtPck" layoutX="772.0" layoutY="171.0" prefHeight="26.0" prefWidth="163.0" style="-fx-background-color: white; -fx-border-color: brown;" />
+      <DatePicker fx:id="endDtPkr" layoutX="943.0" layoutY="171.0" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: white; -fx-border-color: brown;" />
+      <Label layoutX="772.0" layoutY="105.0" text="Date Of Birth           :" />
+      <DatePicker fx:id="dobDtPck" layoutX="771.0" layoutY="123.0" prefHeight="26.0" prefWidth="163.0" style="-fx-background-color: white; -fx-border-color: brown;" />
+      <TextField fx:id="empSalary" layoutX="771.0" layoutY="217.0" prefHeight="27.0" prefWidth="327.0" promptText="Employer Salary" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+      <Label layoutX="771.0" layoutY="199.0" text="Employer Salary       :" />
+      <Button fx:id="updateBtn" layoutX="947.0" layoutY="312.0" mnemonicParsing="false" onAction="#updateDetailsOnAction" prefHeight="27.0" prefWidth="156.0" style="-fx-background-color: blue; -fx-border-color: brown;" text="Update" textFill="#fcfafa">
+         <font>
+            <Font name="Arial Narrow" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="contactTxt" layoutX="213.0" layoutY="312.0" prefHeight="27.0" prefWidth="118.0" promptText="Contact Number" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+      <Button fx:id="addContactBtn" layoutX="337.0" layoutY="312.0" mnemonicParsing="false" onAction="#addContactOnAction" prefHeight="26.0" prefWidth="29.0" style="-fx-background-color: white; -fx-border-color: brown;" text="+" />
+      <ComboBox fx:id="contactCmbBx" layoutX="387.0" layoutY="312.0" onAction="#setTxtBxValueOnAction" prefHeight="27.0" prefWidth="154.0" promptText="Contact List" style="-fx-background-color: white; -fx-border-color: brown;" />
+    </children>
+    <stylesheets>
+        <URL value="@../style/clc-customizer-previewer.css" />
+    </stylesheets>
+</AnchorPane>

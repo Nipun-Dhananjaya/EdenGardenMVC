@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="510.0" prefWidth="776.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.ProfileSelectionFormController">
+   <children>
+      <ImageView fitHeight="516.0" fitWidth="788.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="G:\GDSE 65\JAVA\OOP\Final Project\Project\src\main\resources\image\HD-wallpaper-neon-lines-background-dark-abstract-abstraction-lines-light-background-neon-lines.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="316.0" layoutY="14.0" text="LOGIN" textFill="#232abcc9">
+         <font>
+            <Font name="Broadway" size="43.0" />
+         </font>
+      </Label>
+      <Separator layoutX="23.0" layoutY="50.0" opacity="0.55" prefHeight="24.0" prefWidth="730.0" />
+      <Hyperlink fx:id="wbLnk" layoutX="287.0" layoutY="472.0" onAction="#loadBrowserOnAction" text="https://www.edengardensigiriya.com" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edf1f560" height="325.0" layoutX="230.0" layoutY="90.0" opacity="0.57" stroke="#faf3f3" strokeType="INSIDE" width="317.0" />
+      <TextField layoutX="241.0" layoutY="147.0" prefHeight="34.0" prefWidth="294.0" promptText="Enter your username...">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TextField layoutX="241.0" layoutY="243.0" prefHeight="34.0" prefWidth="294.0" promptText="Enter your password...">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="241.0" layoutY="118.0" text="Username:" />
+      <Label layoutX="241.0" layoutY="210.0" text="Password:" />
+      <Button fx:id="lgnBtn" layoutX="356.0" layoutY="305.0" mnemonicParsing="false" onAction="#loginOnAction" style="-fx-background-color: wheat;" text="Login" textFill="#b96767">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Hyperlink layoutX="332.0" layoutY="368.0" text="Forgot Password...?" />
+   </children>
+</AnchorPane>

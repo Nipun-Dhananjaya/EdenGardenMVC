@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="792.0" prefWidth="1552.0" stylesheets="@../style/clc-customizer-previewer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.ManagerDashboardFormController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="785.0" layoutX="5.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" width="138.0">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.6308771967887878" green="0.87452632188797" blue="0.9789473414421082" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.6921065449714661" green="0.9368420839309692" blue="0.6176218390464783" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <Separator layoutX="159.0" layoutY="62.0" prefHeight="4.0" prefWidth="1298.0" />
+        <JFXButton fx:id="employerBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="33.0" layoutY="17.0" onAction="#showEmployerManageOnAction" prefHeight="88.0" prefWidth="82.0" ripplerFill="#ffffff00" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-width: 2; -fx-background-position: white; -fx-border-color: blue;" text="Employers" textFill="#0d15d9">
+            <graphic>
+                <ImageView fitHeight="49.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/190671.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <effect>
+                <Shadow />
+            </effect>
+        </JFXButton>
+        <JFXButton fx:id="roomsBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="33.0" layoutY="127.0" onAction="#showRoomManageOnAction" prefHeight="88.0" prefWidth="82.0" ripplerFill="#ffffff00" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-width: 2; -fx-background-position: white; -fx-border-color: blue;" text="Rooms" textFill="#0d15d9">
+            <graphic>
+                <ImageView fitHeight="53.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/9330.png_860-removebg-preview.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <effect>
+                <Shadow />
+            </effect>
+        </JFXButton>
+        <Label layoutX="608.0" layoutY="9.0" text="Hotel Eden Garden" textFill="#ed0505d9">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="43.0" />
+            </font>
+        </Label>
+      <JFXButton fx:id="carsBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="33.0" layoutY="238.0" onAction="#showCarManageOnAction" prefHeight="88.0" prefWidth="82.0" ripplerFill="#ffffff00" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-width: 2; -fx-background-position: white; -fx-border-color: blue;" text="Cars" textFill="#0d15d9">
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/384e0b3361d99d9c370b4037115324b9-flat-vintage-car-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <Shadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="bicyclesBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="33.0" layoutY="348.0" onAction="#showBicyclesManageOnAction" prefHeight="88.0" prefWidth="82.0" ripplerFill="#ffffff00" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-width: 2; -fx-background-position: white; -fx-border-color: blue;" text="Bicycles" textFill="#0d15d9">
+         <effect>
+            <Shadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/ecological-bike-icon-vector-9967480-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="suppliersBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="33.0" layoutY="458.0" onAction="#showSupplierManageOnAction" prefHeight="88.0" prefWidth="82.0" ripplerFill="#ffffff00" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-width: 2; -fx-background-position: white; -fx-border-color: blue;" text="Suppliers" textFill="#0d15d9">
+         <effect>
+            <Shadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/201923.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="ordersBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="33.0" layoutY="685.0" onAction="#showOrderManageOnAction" prefHeight="88.0" prefWidth="82.0" ripplerFill="#ffffff00" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-width: 2; -fx-background-position: white; -fx-border-color: blue;" text="Orders" textFill="#0d15d9">
+         <effect>
+            <Shadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/576-5768956_purchase-order-request-icon-instagram-flat-circle-icon-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <AnchorPane fx:id="homeRoot" layoutX="147.0" layoutY="67.0" prefHeight="722.0" prefWidth="1318.0" style="-fx-background-radius: 50; -fx-border-radius: 50;" stylesheets="@../style/clc-customizer-previewer.css" />
+      <JFXButton fx:id="filterBtn" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="1478.0" layoutY="710.0" onAction="#showFilterFormOnAction" prefHeight="57.0" prefWidth="46.0" text="Filter" textFill="#3c06df">
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/filter-icon-7.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9800000190734863" green="0.9800000190734863" blue="0.9800000190734863" opacity="0.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.8802153432032302">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.01595744676887989" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+      </JFXButton>
+      <JFXButton fx:id="homeBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="1474.0" layoutY="75.0" onAction="#loadHomeOnAction" prefHeight="68.0" prefWidth="59.0" text="." textFill="#d9f1f9">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Homes+by+DJ+Jones+Icon+Only+png.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+      </JFXButton>
+      <JFXButton fx:id="profileBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="1478.0" layoutY="142.0" onAction="#loadProfileSelectionOnAction" prefHeight="68.0" prefWidth="59.0" text="." textFill="#d9f1f9">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/android-profile-icon-2.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+      </JFXButton>
+      <Label fx:id="dateLbl" layoutX="1469.0" layoutY="17.0" text="2023/03/31" />
+      <Label fx:id="timeLbl" layoutX="1471.0" layoutY="35.0" text="22 : 45 : 00" />
+      <JFXButton fx:id="itemsBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="33.0" layoutY="569.0" onAction="#showItemManageOnAction" prefHeight="88.0" prefWidth="82.0" ripplerFill="#ffffff00" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-width: 2; -fx-background-position: white; -fx-border-color: blue;" text="Items" textFill="#0d15d9">
+         <effect>
+            <Shadow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="66.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/document-icon-png-29.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="settingsBtn" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" layoutX="1474.0" layoutY="627.0" onAction="#showSettingsFormOnAction" prefHeight="57.0" prefWidth="46.0" text="Settings" textFill="#3c06df">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/settings-icon-gear-3d-render-png.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9800000190734863" green="0.9800000190734863" blue="0.9800000190734863" opacity="0.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.8802153432032302">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.01595744676887989" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+      </JFXButton>
+    </children>
+</AnchorPane>

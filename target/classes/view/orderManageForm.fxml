@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="orderRoot" prefHeight="722.0" prefWidth="1318.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: brown;" stylesheets="@../style/clc-customizer-previewer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.OrderManageFormController">
+    <children>
+        <Label layoutX="568.0" layoutY="14.0" text="Order Manage" textFill="#1410e0">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+            </font>
+        </Label>
+        <Separator layoutX="36.0" layoutY="45.0" prefHeight="2.0" prefWidth="1248.0" />
+        <TextField fx:id="bookingIdTxt" layoutX="236.0" layoutY="71.0" onAction="#orderIdSearchOnAction" prefHeight="27.0" prefWidth="330.0" promptText="Order ID" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="236.0" layoutY="53.0" text="Order ID                :" />
+        <TextField fx:id="suppIdTxt" layoutX="236.0" layoutY="116.0" prefHeight="27.0" prefWidth="330.0" promptText="Supplier ID" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="236.0" layoutY="98.0" text="Supplier ID            :" />
+        <Label layoutX="236.0" layoutY="190.0" text="Item                     :" />
+        <TextField fx:id="deliverTimeTxt" layoutX="435.0" layoutY="161.0" prefHeight="27.0" prefWidth="130.0" promptText="Time" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+        <Label layoutX="236.0" layoutY="143.0" text="Deliver Date          :" />
+        <TableView fx:id="ordTbl" layoutX="35.0" layoutY="284.0" prefHeight="431.0" prefWidth="1248.0" style="-fx-border-color: brown;">
+            <columns>
+                <TableColumn fx:id="columnOrdTblOrdId" prefWidth="85.59997177124023" text="Order ID" />
+                <TableColumn fx:id="columnOrdTblSuppId" prefWidth="106.4000244140625" text="Supplier ID" />
+                <TableColumn fx:id="columnOrdTblItms" prefWidth="330.3999786376953" text="Items">
+               <columns>
+                  <TableColumn fx:id="columnOrdTblItm" prefWidth="330.3999786376953" text="Item" />
+                  <TableColumn fx:id="columnOrdTblQty" prefWidth="120.79998779296875" text="Quentity" />
+               </columns></TableColumn>
+                <TableColumn fx:id="columnOrdTblOrdDte" prefWidth="199.99993896484375" text="Ordered Date &amp; Time" />
+                <TableColumn fx:id="columnOrdTblDeliverDte" prefWidth="209.5999755859375" text="Deliver Date" />
+            <TableColumn fx:id="columnOrdTblOrdCost" prefWidth="99.199951171875" text="Cost" />
+            <TableColumn fx:id="columnOrdTblOrdStatus" prefWidth="91.2000732421875" text="Status" />
+            </columns>
+        </TableView>
+        <Button fx:id="orderBtn" layoutX="236.0" layoutY="246.0" mnemonicParsing="false" onAction="#orderOnAction" prefHeight="27.0" prefWidth="106.0" style="-fx-background-color: #4CAF50; -fx-border-color: brown;" text="Order Now" textFill="#fcfafa">
+            <font>
+                <Font name="Arial Narrow" size="14.0" />
+            </font>
+        </Button>
+        <DatePicker fx:id="deliverDateDtPckr" layoutX="236.0" layoutY="161.0" prefHeight="27.0" prefWidth="196.0" promptText="Date" style="-fx-border-color: brown;" />
+        <ComboBox fx:id="itemCmbBx" layoutX="236.0" layoutY="207.0" prefHeight="27.0" prefWidth="196.0" promptText="Item" style="-fx-background-color: white; -fx-border-color: brown;" />
+        <Button fx:id="orderCancelBtn" layoutX="461.0" layoutY="246.0" mnemonicParsing="false" onAction="#cancelOrderOnAction" prefHeight="27.0" prefWidth="106.0" style="-fx-background-color: red; -fx-border-color: brown;" text="Cancel Order" textFill="#fcfafa">
+            <font>
+                <Font name="Arial Narrow" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="updateBtn" layoutX="350.0" layoutY="246.0" mnemonicParsing="false" onAction="#updateDetailsOnAction" prefHeight="27.0" prefWidth="102.0" style="-fx-background-color: blue; -fx-border-color: brown;" text="Update" textFill="#fcfafa">
+            <font>
+                <Font name="Arial Narrow" size="14.0" />
+            </font>
+        </Button>
+      <TextField fx:id="qtyTxt" layoutX="433.0" layoutY="207.0" prefHeight="27.0" prefWidth="102.0" promptText="Quentity" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+      <Button fx:id="addItmBtn" layoutX="537.0" layoutY="208.0" mnemonicParsing="false" onAction="#addItemToTblOnAction" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: white; -fx-border-color: brown;" text="+" />
+      <TableView fx:id="itemTbl" editable="true" layoutX="750.0" layoutY="71.0" onMouseClicked="#getRowValueOnMouseClicked" prefHeight="164.0" prefWidth="330.0" style="-fx-background-color: white; -fx-border-color: brown;">
+        <columns>
+          <TableColumn fx:id="columnItemTblItmName" prefWidth="214.4000244140625" text="Item" />
+          <TableColumn fx:id="columnItemTblItmQty" prefWidth="111.199951171875" text="Quentity" />
+        </columns>
+      </TableView>
+      <Separator layoutX="657.0" layoutY="71.0" orientation="VERTICAL" prefHeight="206.0" prefWidth="6.0" />
+      <Label layoutX="750.0" layoutY="53.0" text="Items                :" />
+      <TextField fx:id="costTxt" layoutX="949.0" layoutY="246.0" prefHeight="27.0" prefWidth="130.0" promptText="Order Cost" style="-fx-border-radius: 25; -fx-background-radius: 25; -fx-border-color: brown;" />
+      <Label layoutX="865.0" layoutY="251.0" text="Cost                :" />
+    </children>
+</AnchorPane>

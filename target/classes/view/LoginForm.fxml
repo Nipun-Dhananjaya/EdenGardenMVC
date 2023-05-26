@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="510.0" prefWidth="776.0" stylesheets="@../style/clc-customizer-previewer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.LoginFormController">
+   <children>
+      <Label layoutX="316.0" layoutY="14.0" text="LOGIN" textFill="#f50505c9">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="43.0" />
+         </font>
+      </Label>
+      <Separator layoutX="23.0" layoutY="50.0" prefHeight="24.0" prefWidth="730.0" />
+      <Hyperlink fx:id="wbLnk" layoutX="287.0" layoutY="472.0" onAction="#loadBrowserOnAction" text="https://www.edengardensigiriya.com" />
+      <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" height="325.0" layoutX="230.0" layoutY="90.0" opacity="0.57" strokeType="INSIDE" style="-fx-stroke-width: 2;" width="317.0">
+         <stroke>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7789473533630371" green="0.23656919598579407" blue="0.23656919598579407" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7789473533630371" green="0.16732943058013916" blue="0.16732943058013916" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </stroke>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.13860000669956207" green="0.7699999809265137" blue="0.6725122332572937" opacity="0.8799999952316284" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <TextField fx:id="txtUserName" layoutX="241.0" layoutY="147.0" onAction="#escapeOnAction" prefHeight="34.0" prefWidth="294.0" promptText="Enter your username..." style="-fx-border-color: blue;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="241.0" layoutY="118.0" text="Username:" />
+      <Label layoutX="241.0" layoutY="210.0" text="Password:" />
+      <Button fx:id="lgnBtn" layoutX="356.0" layoutY="305.0" mnemonicParsing="false" onAction="#lgnOnAction" stylesheets="@../style/btnStyles.css" text="Login" textFill="#fcf8f8">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Hyperlink fx:id="hprLnkChngePwd" layoutX="331.0" layoutY="364.0" onAction="#loadChangePasswordOnAction" text="Change Password...?" />
+      <PasswordField fx:id="txtPwd" layoutX="240.0" layoutY="241.0" onAction="#loginOnAction" prefHeight="34.0" prefWidth="294.0" promptText="Enter your password..." style="-fx-border-color: blue;" />
+   </children>
+</AnchorPane>

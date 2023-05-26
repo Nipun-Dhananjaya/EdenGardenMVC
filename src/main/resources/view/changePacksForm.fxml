@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="559.0" prefWidth="590.0" style="-fx-border-color: brown; -fx-border-radius: 50;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.ChangePacksFormController">
+   <children>
+      <TextField fx:id="txtNewPrice" layoutX="146.0" layoutY="337.0" onAction="#changePriceOnAction" prefHeight="34.0" prefWidth="294.0" promptText="Enter New Price..." style="-fx-border-color: blue;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="148.0" layoutY="118.0" text="Old Package Price                :" />
+      <Button fx:id="changePriceBtn" layoutX="236.0" layoutY="423.0" mnemonicParsing="false" onAction="#changePriceOnAction" stylesheets="@../style/btnStyles.css" text="Change Price" textFill="#fcf8f8">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="146.0" layoutY="311.0" text="New Package Price                :" />
+      <ComboBox fx:id="packagesCmb" layoutX="148.0" layoutY="145.0" onAction="#selectPriceOnAction" prefHeight="34.0" prefWidth="294.0" promptText="Packages" style="-fx-border-color: blue; -fx-background-color: white;" />
+      <TextField fx:id="txtSleepCount" layoutX="146.0" layoutY="245.0" prefHeight="34.0" prefWidth="294.0" promptText="Sleep Count" style="-fx-border-color: blue;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="146.0" layoutY="219.0" text="Sleep Count                         :" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="settingsRoot" prefHeight="722.0" prefWidth="1318.0" style="-fx-border-color: brown; -fx-border-radius: 50;" stylesheets="@../style/clc-customizer-previewer.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.SettingsFormController">
+   <children>
+      <Label layoutX="616.0" layoutY="22.0" text="Settings" textFill="#1410e0">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="65.0" layoutY="55.0" prefHeight="3.0" prefWidth="1198.0" />
+      <JFXButton fx:id="userChangeBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="153.0" layoutY="191.0" onAction="#showChangeUserOnAction" prefHeight="174.0" prefWidth="299.0" ripplerFill="#ffffff00" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-width: 2; -fx-background-position: white; -fx-border-color: blue;" text="Change User" textFill="#0d15d9">
+         <graphic>
+            <ImageView fitHeight="126.0" fitWidth="147.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/images__1_-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <Shadow />
+         </effect>
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="changePackBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="153.0" layoutY="406.0" onAction="#showChangePackOnAction" prefHeight="134.0" prefWidth="299.0" ripplerFill="#ffffff00" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-width: 2; -fx-background-position: white; -fx-border-color: blue;" text="Change Package Prices" textFill="#0d15d9">
+         <graphic>
+            <ImageView fitHeight="118.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/pngtree-vector-buyer-icon-png-image_312633-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <Shadow />
+         </effect>
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="settingInsideRoot" layoutX="659.0" layoutY="107.0" prefHeight="559.0" prefWidth="590.0" style="-fx-border-radius: 50;" />
+   </children>
+</AnchorPane>

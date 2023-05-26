@@ -1,0 +1,12 @@
+#lgnBtn {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 150%, repeat, aqua 0%, red 50%);
+}
+#resrPwdBtn {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 150%, repeat, aqua 0%, red 50%);
+}
+#changeUserBtn {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 150%, repeat, aqua 0%, red 50%);
+}
+#changePriceBtn {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 150%, repeat, aqua 0%, red 50%);
+}

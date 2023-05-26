@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="559.0" prefWidth="590.0" style="-fx-border-color: brown; -fx-border-radius: 50;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edengardensigiriya.edengarden.controller.ChangeUserFormController">
+   <children>
+      <TextField fx:id="txtOldUserName" layoutX="148.0" layoutY="141.0" onAction="#escapeOldPwdOnAction" prefHeight="34.0" prefWidth="294.0" promptText="Enter your old username..." style="-fx-border-color: blue;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="148.0" layoutY="124.0" text="Old Username                :" />
+      <Label layoutX="148.0" layoutY="189.0" text="Old Password                 :" />
+      <Button fx:id="changeUserBtn" layoutX="239.0" layoutY="454.0" mnemonicParsing="false" onAction="#ChangeUserOnAction" stylesheets="@../style/btnStyles.css" text="Change User" textFill="#fcf8f8">
+         <font>
+            <Font name="Bell MT Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="148.0" layoutY="363.0" text="New Password                :" />
+      <TextField fx:id="txtNewUserEmpId" layoutX="148.0" layoutY="266.0" onAction="#escapeNewUserNameOnAction" prefHeight="34.0" prefWidth="294.0" promptText="Enter New User Employer ID..." style="-fx-border-color: blue;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="148.0" layoutY="249.0" text="New User Employer ID   :" />
+      <PasswordField fx:id="txtOldPwd" layoutX="148.0" layoutY="207.0" onAction="#escapeNewUserIdOnAction" prefHeight="34.0" prefWidth="294.0" promptText="Enter Old Password..." style="-fx-border-color: blue;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </PasswordField>
+      <PasswordField fx:id="txtNewPwd" layoutX="148.0" layoutY="381.0" onAction="#changeUserOnAction" prefHeight="34.0" prefWidth="294.0" promptText="Enter New Password..." style="-fx-border-color: blue;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </PasswordField>
+      <RadioButton fx:id="receptionistRdBtn" layoutX="148.0" layoutY="77.0" mnemonicParsing="false" text="Receptionist">
+         <toggleGroup>
+            <ToggleGroup fx:id="user" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="managerRdBtn" layoutX="351.0" layoutY="77.0" mnemonicParsing="false" text="Manager" toggleGroup="$user" />
+      <TextField fx:id="txtNewUserName" layoutX="148.0" layoutY="324.0" onAction="#escapeNewPwdOnAction" prefHeight="34.0" prefWidth="294.0" promptText="Enter your new username..." style="-fx-border-color: blue;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="148.0" layoutY="307.0" text="New Username                :" />
+   </children>
+</AnchorPane>
