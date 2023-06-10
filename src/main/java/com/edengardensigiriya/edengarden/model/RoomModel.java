@@ -97,7 +97,7 @@ public class RoomModel {
     }
 
     public static List<RoomUpdate> searchRoom(String roomNo) throws SQLException {
-        ResultSet resultSet=CrudUtil.execute("SELECT * FROM room;");
+        ResultSet resultSet=CrudUtil.execute("SELECT * FROM room WHERE room_No=?;",roomNo);
         List<RoomUpdate> data = new ArrayList<>();
 
         while (resultSet.next()) {
