@@ -107,6 +107,11 @@ public class OrderModel {
                 }
                 System.out.println(itmCode);
                 isUpdatedPurchDetls = CrudUtil.execute("UPDATE purchase_detail SET bought_qty=?,ord_cost=? WHERE order_id=? AND itm_code=?;",Double.parseDouble(String.valueOf(itm.getQty())),cost!=null? Double.parseDouble(String.valueOf(cost)):0.00, ordId,itmCode);
+                if (isUpdatedPurchDetls){
+                    continue;
+                }else{
+                    isUpdatedPurchDetls = CrudUtil.execute("INSERT INTO purchase_detail VALUES(?,?,?,?);", ordId,itmCode,Double.parseDouble(String.valueOf(itm.getQty())),cost!=null? Double.parseDouble(String.valueOf(cost)):0.00);
+                }
             }
             System.out.println(isUpdatedOrd);
             System.out.println(isUpdatedPurchDetls);
