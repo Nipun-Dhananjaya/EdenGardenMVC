@@ -1,5 +1,6 @@
 # EdenGardenMVC
 <ul>
+  <li>Developed according to the OOP concepts.</li>
   <li>Developed using MVC architecture.</li>
   <li>Used design patterns are,
   <ul>Sigleton</ul>
